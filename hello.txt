@@ -1,2 +1,8 @@
 Hello world!
 This is another line!
+Date: Monday 6/20/2024 Time: 19:30:30, Count: 1, Pin: D6
+Date: Monday 6/20/2024 Time: 19:30:36, Count: 2, Pin: D6
+Date: Monday 6/20/2024 Time: 19:30:40, Count: 3, Pin: D6
+Date: Monday 6/20/2024 Time: 19:30:42, Count: 4, Pin: D6
+Date: Monday 6/20/2024 Time: 19:32:01, Count: 5, Pin: D6
+Date: Monday 6/20/2024 Time: 19:32:04, Count: 6, Pin: D6
