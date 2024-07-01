@@ -10,6 +10,6 @@
         "D9": "Sensor 7",
         "D41": "Sensor 8"
     },
-    "character_lcd": false,
+    "character_lcd": true,
     "uln2003_stepper": false
 }
