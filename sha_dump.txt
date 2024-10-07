@@ -1,0 +1,9 @@
+
+SHA for hall_effect_sensor_1.txt: a26b6f05487f7e23bdea89d886d1e3e8a2711b72
+SHA for hall_effect_sensor_2.txt: 88c5387f0c56b28f3c567ac6872eca5e44420784
+SHA for hall_effect_sensor_3.txt: 1a6311f7b51cf639e806a527ce3ea51d7ca8c49e
+SHA for hall_effect_sensor_4.txt: 6639acedf944e5d1370971495381dbe0739a3954
+SHA for hall_effect_sensor_5.txt: d96d740babc31d7acff8f8c2610287308c3ec310
+SHA for hall_effect_sensor_6.txt: 4a7952526a25901780ff3fe17f7733f6f30482d3
+SHA for hall_effect_sensor_7.txt: 869e2ca9a878d84fc767f9032a7654f60af34142
+SHA for hall_effect_sensor_8.txt: 6c3b369c75f5b6f4145913dffa76d808fdf27ed7
