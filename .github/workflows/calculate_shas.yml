@@ -32,3 +32,13 @@ jobs:
 
           # Display the contents of the sha_dump.txt file
           cat sha_dump.txt
+
+      - name: Commit SHA Dump
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sha_dump.txt
+          git commit -m "Update sha_dump.txt with file SHAs"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token to push changes
