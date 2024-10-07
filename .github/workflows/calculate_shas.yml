@@ -6,6 +6,9 @@ on:
       - main  # Adjust this to your default branch
   workflow_dispatch:  # Allows manual triggering of the workflow
 
+permissions:  
+  contents: write
+
 jobs:
   calculate-shas:
     runs-on: ubuntu-latest
