@@ -1,47 +1,65 @@
-name: Calculate File SHAs
+name: Calculate SHA of Files
 
 on:
   push:
     branches:
-      - main  # Adjust this to your default branch
-  workflow_dispatch:  # Allows manual triggering of the workflow
+      - main
+
 
 permissions:  
   contents: write
-
+  
 jobs:
-  calculate-shas:
+  calculate_sha:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Calculate SHAs
-        run: |
-          # Create or clear the output file
-          echo "" > sha_dump.txt
-          
-          # Loop through the specified files and calculate SHAs
-          for i in {1..8}; do
-            file="hall_effect_sensor_${i}.txt"
-            if [ -f "$file" ]; then  # Check if the file exists
-              sha=$(git rev-parse HEAD:$file)
-              echo "SHA for $file: $sha" >> sha_dump.txt
-            else
-              echo "$file does not exist." >> sha_dump.txt
-            fi
-          done
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-          # Display the contents of the sha_dump.txt file
-          cat sha_dump.txt
-
-      - name: Commit SHA Dump
+      - name: Calculate SHA for Files
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add sha_dump.txt
-          git commit -m "Update sha_dump.txt with file SHAs"
+          import hashlib
+          import json
+          import os
+
+          # Specify the files for which you want to calculate SHA
+          files_to_hash = [
+              'hall_effect_sensor_1.txt',
+              'hall_effect_sensor_2.txt',
+              'hall_effect_sensor_3.txt',
+              'hall_effect_sensor_4.txt',
+              'hall_effect_sensor_5.txt',
+              'hall_effect_sensor_6.txt',
+              'hall_effect_sensor_7.txt',
+              'hall_effect_sensor_8.txt',
+          ]
+
+          sha_mapping = {}
+
+          for file in files_to_hash:
+              if os.path.exists(file):
+                  with open(file, 'rb') as f:
+                      file_hash = hashlib.sha1()  # You can use sha256() if needed
+                      while chunk := f.read(8192):
+                          file_hash.update(chunk)
+                  sha_mapping[file] = file_hash.hexdigest()
+
+          # Write the SHA mapping to a JSON file
+          with open('sha_dump.json', 'w') as json_file:
+              json.dump(sha_mapping, json_file, indent=4)
+
+      - name: Commit SHA JSON
+        run: |
+          git config --local user.email "you@example.com"
+          git config --local user.name "Your Name"
+          git add sha_dump.json
+          git commit -m "Update SHA dump"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token to push changes
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
