@@ -2,3 +2,7 @@ Date: 10/7/2024 Time: 20:58:04, Count: 1, Pin: D6, Sensor Name: Sensor 4
 Date: 10/7/2024 Time: 20:58:07, Count: 2, Pin: D6, Sensor Name: Sensor 4
 Date: 10/7/2024 Time: 20:58:10, Count: 3, Pin: D6, Sensor Name: Sensor 4
 Date: 10/7/2024 Time: 20:58:13, Count: 4, Pin: D6, Sensor Name: Sensor 4
+Date: 10/7/2024 Time: 20:58:04, Count: 1, Pin: D6, Sensor Name: Sensor 4
+Date: 10/7/2024 Time: 20:58:07, Count: 2, Pin: D6, Sensor Name: Sensor 4
+Date: 10/7/2024 Time: 20:58:10, Count: 3, Pin: D6, Sensor Name: Sensor 4
+Date: 10/7/2024 Time: 20:58:13, Count: 4, Pin: D6, Sensor Name: Sensor 4
