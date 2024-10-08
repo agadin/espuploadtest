@@ -17,3 +17,4 @@ Date: 10/7/2024 Time: 21:05:02, Count: 12, Pin: D6, Sensor Name: Sensor 4
 Date: 10/7/2024 Time: 21:05:05, Count: 13, Pin: D6, Sensor Name: Sensor 4
 Date: 10/7/2024 Time: 21:05:08, Count: 14, Pin: D6, Sensor Name: Sensor 4
 Date: 10/7/2024 Time: 21:05:10, Count: 15, Pin: D6, Sensor Name: Sensor 4
+Date: 10/7/2024 Time: 21:45:30, Count: 17, Pin: D6, Sensor Name: Sensor 4
