@@ -1,2 +1,0 @@
-Date: 10/7/2024 Time: 21:45:21, Count: 1, Pin: D5, Sensor Name: Sensor 3
-Date: 10/7/2024 Time: 21:45:24, Count: 2, Pin: D5, Sensor Name: Sensor 3
