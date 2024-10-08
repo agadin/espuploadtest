@@ -1,4 +1,4 @@
-name: Calculate SHA of Files
+name: Fetch File SHAs
 
 on:
   push:
@@ -9,55 +9,40 @@ on:
 permissions:  
   contents: write
 
+
+
 jobs:
-  calculate_sha:
+  get_shas:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
-
-      - name: Install Dependencies
+      - name: Fetch File SHAs
+        id: fetch_shas
         run: |
-          python -m pip install --upgrade pip
-          pip install Pillow  # Install Pillow for image processing, if needed
+          # Define the files for which we want to fetch the SHA values
+          files_to_fetch=("hall_effect_sensor_1.txt" "hall_effect_sensor_2.txt" "hall_effect_sensor_3.txt" "hall_effect_sensor_4.txt" "hall_effect_sensor_5.txt" "hall_effect_sensor_6.txt" "hall_effect_sensor_7.txt" "hall_effect_sensor_8.txt")
 
-      - name: Calculate SHA for Files
-        run: |
-          import hashlib
-          import json
-          import os
+          # Initialize an empty JSON object
+          shas={}
 
-          # Specify the files for which you want to calculate SHA
-          files_to_hash = [
-              'hall_effect_sensor_1.txt',
-              'hall_effect_sensor_2.txt',
-              'hall_effect_sensor_3.txt',
-              'hall_effect_sensor_4.txt',
-              'hall_effect_sensor_5.txt',
-              'hall_effect_sensor_6.txt',
-              'hall_effect_sensor_7.txt',
-              'hall_effect_sensor_8.txt',
-          ]
+          # Loop through each file and fetch its SHA from the GitHub API
+          for file in "${files_to_fetch[@]}"; do
+              response=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/contents/$file")
+              sha=$(echo "$response" | jq -r .sha)
 
-          sha_mapping = {}
+              # Check if SHA was retrieved successfully
+              if [ "$sha" != "null" ]; then
+                  shas["$file"]="$sha"
+              else
+                  echo "Failed to fetch SHA for $file"
+              fi
+          done
 
-          for file in files_to_hash:
-              if os.path.exists(file):
-                  with open(file, 'rb') as f:
-                      file_hash = hashlib.sha1()  # You can use sha256() if needed
-                      while chunk := f.read(8192):
-                          file_hash.update(chunk)
-                  sha_mapping[file] = file_hash.hexdigest()
-
-          # Write the SHA mapping to a JSON file
-          with open('sha_dump.json', 'w') as json_file:
-              json.dump(sha_mapping, json_file, indent=4)
+          # Convert the associative array to a JSON format
+          echo "${shas[@]}" | jq -n 'reduce inputs as $item ({}; .[$item[0]] = $item[1])' --argjson files "$(echo "${files_to_fetch[@]}" | jq -R . | jq -s .)" --argjson shas "$(printf '%s\n' "${shas[@]}" | jq -R . | jq -s .)" 'reduce inputs as $file ({}; .[$file] = $shas[$file])' > sha_dump.json
 
       - name: Commit SHA JSON
         run: |
@@ -68,3 +53,4 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
