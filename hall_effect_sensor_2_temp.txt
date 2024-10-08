@@ -1,7 +1,0 @@
-Date: Monday 6/20/2024 Time: 20:36:56, Count: 1, Pin: D6
-Date: Monday 6/20/2024 Time: 20:36:58, Count: 2, Pin: D6
-Date: Monday 6/20/2024 Time: 20:36:59, Count: 3, Pin: D6
-Date: Monday 6/20/2024 Time: 20:37:03, Count: 4, Pin: D6
-Date: Monday 6/20/2024 Time: 20:37:04, Count: 5, Pin: D6
-Date: Monday 6/20/2024 Time: 20:37:06, Count: 6, Pin: D6
-Date: Monday 6/20/2024 Time: 20:37:09, Count: 7, Pin: D6
