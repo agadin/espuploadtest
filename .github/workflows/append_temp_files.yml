@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:  
+  contents: write
+
 jobs:
   append-temp-files:
     runs-on: ubuntu-latest
@@ -14,6 +17,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Append temp files to main files
+      continue-on-error: true
       run: |
         set -e
         trap 'echo "Error: Process completed with exit code 1"; exit 1' ERR
@@ -29,6 +33,7 @@ jobs:
         done
 
     - name: Commit changes
+      continue-on-error: true
       run: |
         set -e
         trap 'echo "Error: Process completed with exit code 1"; exit 1' ERR
