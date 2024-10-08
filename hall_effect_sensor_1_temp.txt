@@ -1,0 +1,14 @@
+Date: 10/8/2024 Time: 13:16:15, Count: 4, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:16:17, Count: 5, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:16:20, Count: 6, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:16:21, Count: 7, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:16:47, Count: 8, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:18:50, Count: 9, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:18:51, Count: 10, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:19:01, Count: 11, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:19:13, Count: 12, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:19:17, Count: 13, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:19:19, Count: 14, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:27:36, Count: 15, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:27:39, Count: 16, Pin: D3, Sensor Name: Sensor 1
+Date: 10/8/2024 Time: 13:31:02, Count: 17, Pin: D3, Sensor Name: Sensor 1
