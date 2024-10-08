@@ -26,12 +26,12 @@ jobs:
           main_file="hall_effect_sensor_${i}.txt"
           if [ -f "$temp_file" ]; then
             last_line_main=$(tail -n 1 "$main_file")
-            first_line_temp=$(head -n 1 "$temp_file")
-            if [ "$last_line_main" != "$first_line_temp" ]; then
+            last_line_temp=$(tail -n 1 "$temp_file")
+            if [ "$last_line_main" != "$last_line_temp" ]; then
               cat "$temp_file" >> "$main_file"
               echo "Appended $temp_file to $main_file"
             else
-              echo "No changes: last line of $main_file is the same as the first line of $temp_file"
+              echo "No changes: last line of $main_file is the same as the last line of $temp_file"
             fi
           else
             echo "$temp_file does not exist"
