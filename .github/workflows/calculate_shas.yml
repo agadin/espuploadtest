@@ -10,7 +10,6 @@ permissions:
   contents: write
 
 
-
 jobs:
   get_shas:
     runs-on: ubuntu-latest
@@ -26,7 +25,7 @@ jobs:
           files_to_fetch=("hall_effect_sensor_1.txt" "hall_effect_sensor_2.txt" "hall_effect_sensor_3.txt" "hall_effect_sensor_4.txt" "hall_effect_sensor_5.txt" "hall_effect_sensor_6.txt" "hall_effect_sensor_7.txt" "hall_effect_sensor_8.txt")
 
           # Initialize an empty JSON object
-          shas={}
+          shas="{}"
 
           # Loop through each file and fetch its SHA from the GitHub API
           for file in "${files_to_fetch[@]}"; do
@@ -35,14 +34,15 @@ jobs:
 
               # Check if SHA was retrieved successfully
               if [ "$sha" != "null" ]; then
-                  shas["$file"]="$sha"
+                  # Add to JSON object
+                  shas=$(echo "$shas" | jq --arg file "$file" --arg sha "$sha" '. + {($file): $sha}')
               else
                   echo "Failed to fetch SHA for $file"
               fi
           done
 
-          # Convert the associative array to a JSON format
-          echo "${shas[@]}" | jq -n 'reduce inputs as $item ({}; .[$item[0]] = $item[1])' --argjson files "$(echo "${files_to_fetch[@]}" | jq -R . | jq -s .)" --argjson shas "$(printf '%s\n' "${shas[@]}" | jq -R . | jq -s .)" 'reduce inputs as $file ({}; .[$file] = $shas[$file])' > sha_dump.json
+          # Output the JSON to a file
+          echo "$shas" > sha_dump.json
 
       - name: Commit SHA JSON
         run: |
