@@ -17,3 +17,12 @@ Date: 10/8/2024 Time: 18:25:52, Count: 16, Pin: D4, Sensor Name: Sensor 2
 Date: 10/8/2024 Time: 18:57:43, Count: 17, Pin: D4, Sensor Name: Sensor 2
 Date: 10/8/2024 Time: 18:57:49, Count: 18, Pin: D4, Sensor Name: Sensor 2
 Date: 10/8/2024 Time: 18:58:22, Count: 19, Pin: D4, Sensor Name: Sensor 2
+Date: 10/8/2024 Time: 20:06:05, Count: 20, Pin: D4, Sensor Name: Sensor 2
+Date: 10/8/2024 Time: 20:06:15, Count: 21, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:01:54, Count: 22, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:08:21, Count: 23, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:17:36, Count: 24, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:17:42, Count: 25, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:19:08, Count: 26, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:19:16, Count: 27, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:19:18, Count: 28, Pin: D4, Sensor Name: Sensor 2
