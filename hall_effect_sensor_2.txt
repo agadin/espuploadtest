@@ -92,3 +92,10 @@ Date: 10/13/2024 Time: 19:03:02, Count: 160, Pin: D4, Sensor Name: Sensor 2
 Date: 10/13/2024 Time: 19:03:03, Count: 161, Pin: D4, Sensor Name: Sensor 2
 Date: 10/13/2024 Time: 19:03:09, Count: 162, Pin: D4, Sensor Name: Sensor 2
 Date: 10/13/2024 Time: 19:03:15, Count: 163, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:01:54, Count: 22, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:08:21, Count: 23, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:17:36, Count: 24, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:17:42, Count: 25, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:19:08, Count: 26, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:19:16, Count: 27, Pin: D4, Sensor Name: Sensor 2
+Date: 10/9/2024 Time: 15:19:18, Count: 28, Pin: D4, Sensor Name: Sensor 2

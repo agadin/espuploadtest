@@ -142,3 +142,17 @@ Date: 10/13/2024 Time: 15:18:06, Count: 561, Pin: D3, Sensor Name: Sensor 1
 Date: 10/13/2024 Time: 15:29:46, Count: 562, Pin: D3, Sensor Name: Sensor 1
 Date: 10/13/2024 Time: 15:47:13, Count: 563, Pin: D3, Sensor Name: Sensor 1
 Date: 10/13/2024 Time: 15:47:15, Count: 564, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 09:11:33, Count: 23, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:06:12, Count: 24, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:06:42, Count: 25, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:06:58, Count: 26, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:07:07, Count: 27, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:07:43, Count: 28, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:11:54, Count: 29, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:12:13, Count: 30, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:12:17, Count: 31, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:12:18, Count: 32, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:12:20, Count: 33, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:12:24, Count: 34, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:12:29, Count: 35, Pin: D3, Sensor Name: Sensor 1
+Date: 10/9/2024 Time: 15:12:32, Count: 36, Pin: D3, Sensor Name: Sensor 1
